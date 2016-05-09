@@ -6,7 +6,7 @@ if [ -d $REPO ]; then
     git checkout $BRANCH || exit 1
     git pull origin $BRANCH
 else
-    git clone https://$GITHUB_TOKEN@github.com/$GIT_USER/$REPO.git
+    git clone https://$GITHUB_TOKEN@github.com/$GIT_USER/$REPO.git || exit 1
     pushd $REPO
     git checkout $BRANCH || exit 1
 fi
