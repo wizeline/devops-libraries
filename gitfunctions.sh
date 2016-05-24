@@ -3,8 +3,8 @@
 # ensure the repo exists
 if [ -d $REPO ]; then
     pushd $REPO
-    git checkout $BRANCH || exit 1
-    if [[ $TYPE = "DEVELOPMENT" ]]; then
+    if [[  $TYPE != "DEVELOPMENT" ]]; then
+        git checkout $BRANCH || exit 1
         git pull origin $BRANCH
     fi
 else
