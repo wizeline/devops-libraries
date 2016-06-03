@@ -4,6 +4,7 @@
 if [ -d $REPO ]; then
     pushd $REPO
     if [[  $TYPE != "DEVELOPMENT" ]]; then
+        git pull
         git checkout $BRANCH || exit 1
         git pull origin $BRANCH
     fi
