@@ -1,2 +1,2 @@
 # devops-libraries
-Helper Functions
+Helper Functions for bots
